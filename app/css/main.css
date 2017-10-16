@@ -415,7 +415,11 @@ body {
 
 section {
   min-height: 600px;
-  padding: 20px 0; }
+  padding: 40px 0 10px;
+  background-image: url("../../img/decor/camera-decore.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: auto 40px; }
 
 .container {
   width: 960px;
@@ -517,8 +521,6 @@ main.main {
     justify-content: center;
     width: 100%;
     height: 100%; }
-  .logo__pic {
-    height: 100%; }
   .logo__title {
     padding: 0 10px;
     font-size: 22px; }
@@ -541,28 +543,36 @@ main.main {
         .logo__titlename {
           font-size: 38px; } }
 
-@media screen and (max-width: 992px) {
-  .contacts {
-    font-size: 16px; } }
-@media screen and (max-width: 768px) {
-  .contacts {
-    font-size: 14px; } }
+.shortdescription {
+  font-size: 22px; }
 
 .mainmenu {
   background-color: rgba(255, 255, 255, 0.999); }
   .mainmenu__list {
     display: flex;
     flex-wrap: wrap; }
+    @media screen and (max-width: 992px) {
+      .mainmenu__list {
+        justify-content: center; } }
   .mainmenu__item {
     display: inline-flex; }
   .mainmenu__link {
     padding: 10px 15px;
     color: #8f1a2a;
     text-transform: uppercase; }
+    @media screen and (max-width: 992px) {
+      .mainmenu__link {
+        padding: 10px; } }
     .mainmenu__link:hover {
       background-color: rgba(170, 155, 184, 0.8);
       color: #fff; }
 
+@media screen and (max-width: 992px) {
+  .contacts {
+    font-size: 16px; } }
+@media screen and (max-width: 768px) {
+  .contacts {
+    font-size: 14px; } }
 .contacts__list {
   display: inline-block;
   text-align: left; }
@@ -611,7 +621,7 @@ main.main {
     height: 240px;
     margin: 30px 0 30px 20px;
     padding: 10px;
-    box-shadow: inset 0px -2px 9px 3px #fff;
+    box-shadow: 0 0 1px 1px rgba(238, 238, 238, 0.99), 0 0 1px 2px rgba(238, 238, 238, 0.99), inset 0px -2px 9px 3px #fff;
     position: relative;
     background-position: center;
     background-size: cover; }
@@ -642,11 +652,11 @@ main.main {
       right: 5px;
       left: auto; }
     .photomenu__item:hover {
-      box-shadow: inset 0px -2px 20px 10px #fff, 0px -1px 4px 2px #eee; }
+      box-shadow: 0 0 1px 1px rgba(238, 238, 238, 0.6), inset 0px -2px 20px 5px rgba(238, 238, 238, 0.9), inset 0px -4px 30px 15px rgba(255, 255, 255, 0.999), 0px -1px 4px 2px #eee; }
     .photomenu__item:hover .photomenu__title {
       background-color: rgba(250, 242, 220, 0.6);
-      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.95), 1px 1px 10px black;
-      color: rgba(170, 155, 184, 0.8); }
+      text-shadow: 0 0 10px white, 0 0 5px white;
+      color: #aa9bb8; }
     .photomenu__item_aboutme {
       background-image: url("../../img/photomenu/aboutme.jpg"); }
     .photomenu__item_myworks {
@@ -668,7 +678,10 @@ main.main {
     background-color: rgba(250, 242, 220, 0.4);
     padding: 10px;
     font-size: 30px;
-    color: white; }
+    color: #fff; }
+    @media screen and (max-width: 992px) {
+      .photomenu__title {
+        font-size: 22px; } }
     @media screen and (max-width: 768px) {
       .photomenu__title {
         background-color: transparent;
@@ -685,26 +698,114 @@ main.main {
   line-height: 2;
   text-align: justify; }
 
+.pricetable {
+  margin: 80px auto 30px auto;
+  text-align: center;
+  display: flex;
+  width: calc(960 - 30px * 2); }
+  @media screen and (max-width: 992px) {
+    .pricetable {
+      width: calc(730 - 30px * 2); } }
+  .pricetable__item {
+    font: 12px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.8);
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 20px;
+    width: 300px;
+    position: relative; }
+    .pricetable__item:nth-child(1) {
+      border-radius: 10px 0 0 10px; }
+      .pricetable__item:nth-child(1) .pricetable__title {
+        border-radius: 10px 0 0 0; }
+    .pricetable__item:nth-child(3) {
+      border-radius: 0 10px 10px 0; }
+      .pricetable__item:nth-child(3) .pricetable__title {
+        border-radius: 0 10px 0 0; }
+  .pricetable__title {
+    font-size: 20px;
+    padding: 20px;
+    margin: -20px -20px 60px -20px;
+    background-color: #eee;
+    background-image: linear-gradient(#fff, #eee); }
+  .pricetable__numeral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #777;
+    background: #fff;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+    height: 150px;
+    width: 150px;
+    margin: 10px auto -80px;
+    border-radius: 50%; }
+
+.pricetable ul {
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style: none; }
+
+.pricetable li {
+  border-top: 1px solid #ddd;
+  padding: 10px 0; }
+
+.pricetable .signup {
+  position: relative;
+  padding: 8px 20px;
+  margin: 20px 0 0 0;
+  color: #fff;
+  font: bold 14px Arial, Helvetica;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #aa9bb8;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 0 rgba(0, 0, 0, 0.7); }
+
+.pricetable .signup:hover {
+  background-color: #62bc30; }
+
+.pricetable .signup:active, .pricetable .signup:focus {
+  background: #62bc30;
+  top: 2px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.7) inset; }
+
 .reviews {
   overflow: hidden; }
   .reviews__item {
-    height: 240px;
+    height: 440px;
     padding: 20px; }
   .reviews__pic {
     height: 200px;
     width: 200px;
     border-radius: 50%;
     overflow: hidden;
-    display: inline-block;
-    vertical-align: middle; }
+    display: block;
+    margin: 20px auto; }
   .reviews__img {
     min-height: 200px;
     min-width: 200px; }
-  .reviews__text {
-    display: inline-block;
-    vertical-align: middle;
+  .reviews__name {
+    text-align: center;
     font-size: 24px;
-    padding: 10px 15px; }
+    padding: 10px 50px; }
+  .reviews__text {
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.4;
+    padding: 10px 30px; }
+
+.preparation__text {
+  padding: 20px 0;
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.5; }
+  .preparation__text p {
+    padding-top: 10px; }
 
 .gallery {
   overflow: hidden; }
