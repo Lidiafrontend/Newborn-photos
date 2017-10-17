@@ -429,7 +429,7 @@ section {
       width: 730px; } }
   @media screen and (max-width: 768px) {
     .container {
-      width: 460px;
+      width: 480px;
       padding: 0; } }
   @media screen and (max-width: 480px) {
     .container {
@@ -611,20 +611,18 @@ main.main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-left: -20px;
+    margin: auto;
     width: calc(960px - 20px + 20px); }
     @media screen and (max-width: 992px) {
       .photomenu__list {
-        margin-left: -15px;
         width: calc(730px - 20px + 15px); } }
     @media screen and (max-width: 768px) {
       .photomenu__list {
-        margin-left: -5px;
-        width: calc(460px - 20px + 5px); } }
+        width: calc(480px - 20px + 5px); } }
   .photomenu__item {
     width: 300px;
     height: 240px;
-    margin: 30px 0 30px 20px;
+    margin: 30px 10px;
     padding: 10px;
     box-shadow: 0 0 5px #ccc, inset 0px -2px 20px 5px rgba(238, 238, 238, 0.9);
     border: 5px solid #fff;
@@ -635,12 +633,12 @@ main.main {
       .photomenu__item {
         width: 220px;
         height: 176px;
-        margin: 20px 0 20px 15px; } }
+        margin: 20px 7px; } }
     @media screen and (max-width: 768px) {
       .photomenu__item {
         width: 140px;
         height: 110px;
-        margin: 10px 0 10px 5px; } }
+        margin: 10px 2px 60px; } }
     .photomenu__item::before, .photomenu__item::after {
       z-index: -1;
       position: absolute;
@@ -677,14 +675,15 @@ main.main {
     font-family: 'Lobster';
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.95);
     width: 100%;
-    min-height: 50px;
+    min-height: 60px;
     position: absolute;
     bottom: 0;
     left: 0;
     background-color: rgba(250, 242, 220, 0.4);
     padding: 10px;
     font-size: 30px;
-    color: #fff; }
+    color: #fff;
+    overflow: hidden; }
     @media screen and (max-width: 992px) {
       .photomenu__title {
         font-size: 22px; } }
@@ -693,7 +692,6 @@ main.main {
         background-color: transparent;
         text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9);
         width: 100%;
-        min-height: unset;
         position: absolute;
         top: 110px;
         padding: 5px;
@@ -708,10 +706,13 @@ main.main {
   margin: 80px auto 30px auto;
   text-align: center;
   display: flex;
-  width: calc(960 - 30px * 2); }
+  width: calc(960px - 30px * 2); }
   @media screen and (max-width: 992px) {
     .pricetable {
-      width: calc(730 - 30px * 2); } }
+      width: calc(730px - 20px * 2); } }
+  @media screen and (max-width: 768px) {
+    .pricetable {
+      width: calc(480px - 1px * 2); } }
   .pricetable__item {
     font: 12px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
     text-shadow: 0 1px rgba(255, 255, 255, 0.8);
@@ -719,7 +720,7 @@ main.main {
     border: 1px solid #ddd;
     color: #333;
     padding: 20px;
-    width: 300px;
+    width: 33.33%;
     position: relative; }
     .pricetable__item:nth-child(1) {
       border-radius: 10px 0 0 10px; }
@@ -735,6 +736,11 @@ main.main {
     margin: -20px -20px 60px -20px;
     background-color: #eee;
     background-image: linear-gradient(#fff, #eee); }
+    @media screen and (max-width: 768px) {
+      .pricetable__title {
+        font-size: 10px;
+        padding: 10px;
+        margin: -10px -10px 60px -10px; } }
   .pricetable__numeral {
     display: flex;
     justify-content: center;
@@ -748,6 +754,11 @@ main.main {
     width: 150px;
     margin: 10px auto -80px;
     border-radius: 50%; }
+    @media screen and (max-width: 768px) {
+      .pricetable__numeral {
+        font-size: 16px;
+        height: 100px;
+        width: 100px; } }
 
 .pricetable ul {
   margin: 20px 0 0 0;
