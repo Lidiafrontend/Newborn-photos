@@ -464,12 +464,17 @@ h1, h2, h3, h4, h5, h6 {
   src: url("../../fonts/Icomoon/icomoon.eot?xwhexx#iefix") format("embedded-opentype"), url("../../fonts/Icomoon/icomoon.woff?xwhexx") format("woff"), url("../../fonts/Icomoon/icomoon.svg?xwhexx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../../fonts/Open Sans/opensanscondlight.ttf") format("ttf"), url("../../fonts/Open Sans/opensanscondlight.woff") format("woff"), url("../../fonts/Open Sans/opensanscondlight.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 body {
   display: flex;
   flex-direction: column;
   background-position: center;
   background-size: cover;
-  font-family: 'Open Sans Condensed', sans-serif; }
+  font-family: 'Open Sans', sans-serif; }
 
 header.header, footer.footer {
   flex: 0 0 auto;
@@ -621,7 +626,8 @@ main.main {
     height: 240px;
     margin: 30px 0 30px 20px;
     padding: 10px;
-    box-shadow: 0 0 1px 1px rgba(238, 238, 238, 0.99), 0 0 1px 2px rgba(238, 238, 238, 0.99), inset 0px -2px 9px 3px #fff;
+    box-shadow: 0 0 5px #ccc, inset 0px -2px 20px 5px rgba(238, 238, 238, 0.9);
+    border: 5px solid #fff;
     position: relative;
     background-position: center;
     background-size: cover; }
@@ -652,7 +658,7 @@ main.main {
       right: 5px;
       left: auto; }
     .photomenu__item:hover {
-      box-shadow: 0 0 1px 1px rgba(238, 238, 238, 0.6), inset 0px -2px 20px 5px rgba(238, 238, 238, 0.9), inset 0px -4px 30px 15px rgba(255, 255, 255, 0.999), 0px -1px 4px 2px #eee; }
+      box-shadow: 0 0 5px #ccc, inset 0px -2px 20px 5px rgba(238, 238, 238, 0.9), inset 0px -4px 30px 15px rgba(238, 238, 238, 0.999); }
     .photomenu__item:hover .photomenu__title {
       background-color: rgba(250, 242, 220, 0.6);
       text-shadow: 0 0 10px white, 0 0 5px white;
