@@ -415,7 +415,7 @@ body {
 
 section {
   min-height: 600px;
-  padding: 40px 0 10px;
+  padding: 40px 0 20px;
   background-image: url("../../img/decor/camera-decore.png");
   background-position: top center;
   background-repeat: no-repeat;
@@ -676,17 +676,22 @@ main.main {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.95);
     width: 100%;
     min-height: 60px;
+    max-height: 80px;
     position: absolute;
     bottom: 0;
     left: 0;
     background-color: rgba(250, 242, 220, 0.4);
     padding: 10px;
-    font-size: 30px;
+    font-size: 28px;
+    line-height: 35px;
     color: #fff;
     overflow: hidden; }
     @media screen and (max-width: 992px) {
       .photomenu__title {
-        font-size: 22px; } }
+        font-size: 22px;
+        min-height: 50px;
+        max-height: 70px;
+        line-height: 30px; } }
     @media screen and (max-width: 768px) {
       .photomenu__title {
         background-color: transparent;
@@ -696,6 +701,7 @@ main.main {
         top: 110px;
         padding: 5px;
         font-size: 16px;
+        line-height: 20px;
         color: #aa9bb8; } }
 
 .aboutme__description p {
@@ -712,8 +718,8 @@ main.main {
       width: calc(730px - 20px * 2); } }
   @media screen and (max-width: 768px) {
     .pricetable {
-      width: calc(480px - 1px * 2); } }
-  .pricetable__item {
+      width: calc(480px - 10px * 2); } }
+  .pricetable__elem {
     font: 12px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
     text-shadow: 0 1px rgba(255, 255, 255, 0.8);
     background: #fff;
@@ -721,26 +727,41 @@ main.main {
     color: #333;
     padding: 20px;
     width: 33.33%;
-    position: relative; }
-    .pricetable__item:nth-child(1) {
+    position: relative;
+    margin-bottom: 4px; }
+    .pricetable__elem:nth-child(1) {
       border-radius: 10px 0 0 10px; }
-      .pricetable__item:nth-child(1) .pricetable__title {
+      .pricetable__elem:nth-child(1) .pricetable__title {
         border-radius: 10px 0 0 0; }
-    .pricetable__item:nth-child(3) {
+    .pricetable__elem:nth-child(3) {
       border-radius: 0 10px 10px 0; }
-      .pricetable__item:nth-child(3) .pricetable__title {
+      .pricetable__elem:nth-child(3) .pricetable__title {
         border-radius: 0 10px 0 0; }
+    .pricetable__elem:hover {
+      z-index: 2;
+      top: -13px;
+      border-width: 3px;
+      margin-bottom: 0;
+      border-radius: 5px;
+      box-shadow: 20px 0 10px -10px rgba(0, 0, 0, 0.15), -20px 0 10px -10px rgba(0, 0, 0, 0.15); }
   .pricetable__title {
-    font-size: 20px;
-    padding: 20px;
     margin: -20px -20px 60px -20px;
     background-color: #eee;
     background-image: linear-gradient(#fff, #eee); }
     @media screen and (max-width: 768px) {
       .pricetable__title {
-        font-size: 10px;
-        padding: 10px;
         margin: -10px -10px 60px -10px; } }
+    .pricetable__title p {
+      font-size: 20px;
+      display: block;
+      padding: 15px 10px 0;
+      overflow: hidden;
+      height: 70px; }
+      @media screen and (max-width: 768px) {
+        .pricetable__title p {
+          font-size: 10px;
+          padding: 10px 10px 0;
+          height: 45px; } }
   .pricetable__numeral {
     display: flex;
     justify-content: center;
@@ -759,37 +780,30 @@ main.main {
         font-size: 16px;
         height: 100px;
         width: 100px; } }
-
-.pricetable ul {
-  margin: 20px 0 0 0;
-  padding: 0;
-  list-style: none; }
-
-.pricetable li {
-  border-top: 1px solid #ddd;
-  padding: 10px 0; }
-
-.pricetable .signup {
-  position: relative;
-  padding: 8px 20px;
-  margin: 20px 0 0 0;
-  color: #fff;
-  font: bold 14px Arial, Helvetica;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  background-color: #aa9bb8;
-  border-radius: 3px;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 0 rgba(0, 0, 0, 0.7); }
-
-.pricetable .signup:hover {
-  background-color: #62bc30; }
-
-.pricetable .signup:active, .pricetable .signup:focus {
-  background: #62bc30;
-  top: 2px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.7) inset; }
+  .pricetable__signup {
+    position: relative;
+    padding: 8px 20px;
+    margin: 20px 0 0 0;
+    color: #fff;
+    font: bold 14px Arial, Helvetica;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #aa9bb8;
+    border-radius: 3px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 0 rgba(0, 0, 0, 0.7); }
+    .pricetable__signup:hover {
+      background-color: #62bc30; }
+    .pricetable__signup:active, .pricetable__signup:focus {
+      background: #62bc30;
+      top: 2px;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.7) inset; }
+  .pricetable__list {
+    margin: 20px 0 0 0; }
+  .pricetable__item {
+    border-top: 1px solid #ddd;
+    padding: 10px 0; }
 
 .reviews {
   overflow: hidden; }
@@ -797,15 +811,19 @@ main.main {
     height: 440px;
     padding: 20px; }
   .reviews__pic {
-    height: 200px;
-    width: 200px;
+    height: 212px;
+    width: 212px;
     border-radius: 50%;
     overflow: hidden;
     display: block;
-    margin: 20px auto; }
+    margin: 20px auto;
+    padding: 5px 0 0 5px; }
   .reviews__img {
     min-height: 200px;
-    min-width: 200px; }
+    min-width: 200px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 5px #ccc; }
   .reviews__name {
     text-align: center;
     font-size: 24px;
@@ -814,7 +832,9 @@ main.main {
     font-size: 20px;
     font-style: italic;
     line-height: 1.4;
-    padding: 10px 30px; }
+    padding: 10px 30px 0;
+    overflow: hidden;
+    max-height: 175px; }
 
 .preparation__text {
   padding: 20px 0;
