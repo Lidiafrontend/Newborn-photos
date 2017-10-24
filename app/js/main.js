@@ -11,7 +11,7 @@ $(document).ready(function(){
 
     $('.reviews').bxSlider({
         controls: false,
-        slideMargin: 10,
+        slideMargin: 5,
         nextText: 'next', 
         prevText: 'prev' 
     });
