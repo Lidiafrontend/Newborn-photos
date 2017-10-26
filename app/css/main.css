@@ -488,7 +488,8 @@ main.main {
 
 .header {
   background-color: rgba(250, 242, 220, 0.8);
-  box-shadow: 0 1px 10px 2px rgba(137, 151, 158, 0.8); }
+  box-shadow: 0 1px 10px 2px rgba(137, 151, 158, 0.8);
+  display: flex; }
   .header__container {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -852,7 +853,7 @@ main.main {
 .reviews {
   overflow: hidden; }
   .reviews__item {
-    background: linear-gradient(rgba(98, 188, 48, 0.3), rgba(98, 188, 48, 0.1), rgba(98, 188, 48, 0.4), rgba(98, 188, 48, 0.2), rgba(98, 188, 48, 0.3));
+    background-color: rgba(255, 255, 255, 0.5);
     height: 540px;
     padding: 20px; }
   .reviews__pic {
