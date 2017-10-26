@@ -488,9 +488,7 @@ main.main {
 
 .header {
   background-color: rgba(250, 242, 220, 0.8);
-  box-shadow: 0 1px 10px 2px rgba(137, 151, 158, 0.8);
-  display: flex;
-  flex-direction: column; }
+  box-shadow: 0 1px 10px 2px rgba(137, 151, 158, 0.8); }
   .header__container {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -499,16 +497,15 @@ main.main {
     padding: 0 20px;
     border-right: 1px solid #8f1a2a;
     text-align: center;
-    flex-grow: 1; }
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
     .header__part:last-child {
       border: none; }
     @media screen and (max-width: 992px) {
       .header__part {
         padding: 0 10px; } }
-    .header__part > div {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%); }
     @media screen and (max-width: 768px) {
       .header__part_tablethide {
         width: 1px;
