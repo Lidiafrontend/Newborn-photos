@@ -489,6 +489,7 @@ main.main {
 .header {
   background-color: rgba(250, 242, 220, 0.8);
   box-shadow: 0 1px 10px 2px rgba(137, 151, 158, 0.8);
+  display: flex;
   flex-direction: column; }
   .header__container {
     padding-top: 25px;
