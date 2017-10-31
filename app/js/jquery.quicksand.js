@@ -31,10 +31,10 @@ Github site: http://github.com/razorjack/quicksand
         };
         $.extend(options, customOptions);
         
-        // if ($.browser.msie || (typeof($.fn.scale) == 'undefined')) {
-        //     // Got IE and want scaling effect? Kiss my ass.
-        //     options.useScaling = false;
-        // }
+        if ($.browser.msie || (typeof($.fn.scale) == 'undefined')) {
+            // Got IE and want scaling effect? Kiss my ass.
+            options.useScaling = false;
+        }
         
         var callbackFunction;
         if (typeof(arguments[1]) == 'function') {
@@ -60,10 +60,10 @@ Github site: http://github.com/razorjack/quicksand
             var $source = $(this).find(options.selector); // source collection items
             
             // Replace the collection and quit if IE6
-            // if ($.browser.msie && $.browser.version.substr(0,1)<7) {
-            //     $sourceParent.html('').append($collection);
-            //     return;
-            // }
+            if ($.browser.msie && $.browser.version.substr(0,1)<7) {
+                $sourceParent.html('').append($collection);
+                return;
+            }
 
             // Gets called when any animation is finished
             var postCallbackPerformed = 0; // prevents the function from being called more than one time
